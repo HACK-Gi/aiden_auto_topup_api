@@ -645,8 +645,8 @@ def answer_callback(callback_id):
     requests.post(url, json={'callback_query_id': callback_id}, timeout=10)
 
 # ================== INIT DATABASE (តារាងនិងទិន្នន័យដំបូង) ==================
+
 with app.app_context():
     db.create_all()
-    populate_services()
 
 # ចំណាំ៖ គ្មាន app.run() ទេ! Vercel នឹងហៅ app ដោយស្វ័យប្រវត្តិ
